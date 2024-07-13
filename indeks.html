@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak Kata Edukasi</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="cover"></div>
+    <div class="container">
+        <header class="main-header">
+            <img src="img/logo_game.png" alt="Logo Game" class="logo-game" />
+            <img src="img/logo_polibang.png" alt="Logo Polibang" class="logo-polibang" />
+            <img src="img/logo_rpl.png" alt="Logo rpl" class="logo_rpl">
+            <div class="tagline">Belajar Sambil Bermain!</div>
+        </header>
+        
+        <div class="description">
+            <p>Tebak Kata Edukasi adalah permainan yang mengasah pengetahuan dan kemampuan berpikir kritis.
+                 Cocok untuk semua usia!</p>
+        </div>
+        
+        <div class="main-content">
+            <button class="btn start-game" onclick="showGame()">Mulai Permainan</button>
+        </div>
+        
+        <footer class="main-footer">
+            <p>Ikuti kami di:</p>
+            <div class="social-links">
+                <a href="https://github.com/Alvinpurnamasari/2023010009_Alvin-Purnamasari" target="_blank"><img src="img/social_icons/github.png" alt="Github"></a>
+                <a href="https://facebook.com" target="_blank"><img src="img/social_icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/alvinprnmasr_?igsh=YnMxZHpkZHdudmRl " target="_blank"><img src="img/social_icons/instagram.png" alt="Instagram"></a>
+                <!-- Tambahkan ikon sosial media lainnya di sini -->
+            </div>
+            <p>&copy; 2024 Tebak Kata Edukasi</p>
+        </footer>
+    </div>
+    
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <div class="player-name">
+            <label for="playerName">Masukkan Nama Anda:</label>
+            <input type="text" id="playerName" placeholder="Nama Anda" />
+            <button class="btn" onclick="startGame()">Mulai</button>
+        </div>
+        <div class="game-area" id="gameArea" style="display: none;">
+            <h1>Selamat Datang, <span id="displayName"></span>!</h1>
+            <img id="image" src="" alt="Image" width="200" />
+            <div id="scrambled">
+                <h2 id="scrambleWord">Word</h2>
+                <p id="hint"></p>
+            </div>
+            <div id="form">
+                <input id="input" type="text" placeholder="ketik jawaban disini" />
+            </div>
+            <h3 id="output">Hasil:</h3>
+            <div class="foot">
+                <button type="button" onclick="chek()">Chek</button>
+                <button type="button" onclick="selanjutnya()" disabled id="nextButton">Selanjutnya</button>
+            </div>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
